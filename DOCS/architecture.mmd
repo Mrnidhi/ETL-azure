@@ -4,11 +4,11 @@ flowchart LR
     SQL[(SQL DB)]
   end
 
-  ADF[Azure Data Factory\nPipelines + Datasets]
-  ADLS_B[ADLS Gen2\nBronze (Raw)]
-  DB_S[Azure Databricks\nSilver (Cleaned)]
-  DB_G[Azure Databricks\nGold (Aggregated)]
-  SYN[Azure Synapse\n(SQL/Serverless)]
+  ADF[Azure Data Factory<br/>Pipelines + Datasets]
+  ADLS_B[ADLS Gen2<br/>Bronze (Raw)]
+  DB_S[Azure Databricks<br/>Silver (Cleaned)]
+  DB_G[Azure Databricks<br/>Gold (Aggregated)]
+  SYN[Azure Synapse<br/>(SQL/Serverless)]
   PBI[Power BI / Dashboards]
 
   GH --> ADF
