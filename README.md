@@ -76,3 +76,10 @@ Folder suggestion in ADLS:
 
 ## Why this matters
 This pipeline is simple, but it follows real industry patterns: clear layers, reproducible runs, and tools that work well together. It can be a base for larger production systems.
+
+## Sample visuals (from Gold data)
+![Order status](DOCS/Order_status.png)
+
+![Sales revenue](DOCS/SalesRevenue.png)
+
+![Signups per year](DOCS/SignUp%20per%20Year.png)
