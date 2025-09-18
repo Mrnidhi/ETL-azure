@@ -20,32 +20,29 @@ Mermaid diagram (viewable on GitHub):
 
 ```mermaid
 flowchart LR
-  subgraph Sources
-    GH[GitHub CSVs]
-    SQL[(SQL DB)]
-  end
-
+  GH[GitHub CSVs]
+  SQL[(SQL DB)]
   ADF[Azure Data Factory<br/>Pipelines + Datasets]
-  ADLS_B[ADLS Gen2<br/>Bronze (Raw)]
-  DB_S[Azure Databricks<br/>Silver (Cleaned)]
-  DB_G[Azure Databricks<br/>Gold (Aggregated)]
+  ADLSB[ADLS Gen2<br/>Bronze (Raw)]
+  DBS[Azure Databricks<br/>Silver (Cleaned)]
+  DBG[Azure Databricks<br/>Gold (Aggregated)]
   SYN[Azure Synapse<br/>(SQL/Serverless)]
   PBI[Power BI / Dashboards]
 
   GH --> ADF
   SQL --> ADF
-  ADF --> ADLS_B
-  ADLS_B --> DB_S
-  DB_S --> DB_G
-  DB_G --> SYN
-  DB_G --> PBI
+  ADF --> ADLSB
+  ADLSB --> DBS
+  DBS --> DBG
+  DBG --> SYN
+  DBG --> PBI
 
   classDef storage fill:#dff0ff,stroke:#0078d4,color:#003a6d;
   classDef compute fill:#fff4ce,stroke:#8a6d3b,color:#5c4400;
   classDef service fill:#e5f5e5,stroke:#2f855a,color:#22543d;
 
-  class ADLS_B storage;
-  class DB_S,DB_G compute;
+  class ADLSB storage;
+  class DBS,DBG compute;
   class ADF,SYN,PBI service;
 ```
 
