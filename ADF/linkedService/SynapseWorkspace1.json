@@ -1,0 +1,12 @@
+{
+	"name": "SynapseWorkspace1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SynapseWorkspace",
+		"typeProperties": {
+			"workspaceName": "synapse-workspace-sagar",
+			"authenticationType": "ManagedServiceIdentity"
+		}
+	}
+}

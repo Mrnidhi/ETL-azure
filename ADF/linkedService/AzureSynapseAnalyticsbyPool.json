@@ -1,0 +1,15 @@
+{
+	"name": "AzureSynapseAnalyticsbyPool",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"server": "synapse-workspace-sagar.sql.azuresynapse.net",
+			"database": "olistsynapsepool",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}

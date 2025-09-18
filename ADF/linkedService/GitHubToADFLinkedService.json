@@ -1,0 +1,14 @@
+{
+	"name": "GitHubToADFLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "This linked Service is used to link GitHub and Azure data factory to get the Data from the GitHub.",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/Sagar1302/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

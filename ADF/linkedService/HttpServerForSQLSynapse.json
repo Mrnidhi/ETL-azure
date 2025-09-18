@@ -1,0 +1,13 @@
+{
+	"name": "HttpServerForSQLSynapse",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/Sagar1302/BigDataProject/refs/heads/main/SQLSynapsePath.json",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

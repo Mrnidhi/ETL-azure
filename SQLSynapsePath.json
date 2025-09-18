@@ -1,0 +1,26 @@
+
+[
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLShippedview.sql"
+  },
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLProcessingView.sql"
+
+  },
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLInvoicedview.sql"
+
+  },
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLDeliveredView.sql"
+
+  },
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLCanceledView.sql"
+
+  },
+  {
+    "relative_url": "https://olistdatastoragesagar.blob.core.windows.net/synapsesqlprocedure/SQLCreateGold.sql"
+
+  }
+]

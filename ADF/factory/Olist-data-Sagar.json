@@ -1,0 +1,9 @@
+{
+	"name": "Olist-data-Sagar",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f175c939-681d-4f91-90d9-f473fe23dfd1",
+		"tenantId": "06c482c4-0354-487a-a148-eeb2d8addbcb"
+	}
+}
