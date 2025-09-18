@@ -16,6 +16,39 @@ The dataset is the Olist e‑commerce data (CSV files). We load raw CSVs to the 
 
 Check `DOCS/Project Architecture.jpg` for the visual diagram.
 
+Mermaid diagram (viewable on GitHub):
+
+```mermaid
+flowchart LR
+  subgraph Sources
+    GH[GitHub CSVs]
+    SQL[(SQL DB)]
+  end
+
+  ADF[Azure Data Factory\nPipelines + Datasets]
+  ADLS_B[ADLS Gen2\nBronze (Raw)]
+  DB_S[Azure Databricks\nSilver (Cleaned)]
+  DB_G[Azure Databricks\nGold (Aggregated)]
+  SYN[Azure Synapse\n(SQL/Serverless)]
+  PBI[Power BI / Dashboards]
+
+  GH --> ADF
+  SQL --> ADF
+  ADF --> ADLS_B
+  ADLS_B --> DB_S
+  DB_S --> DB_G
+  DB_G --> SYN
+  DB_G --> PBI
+
+  classDef storage fill:#dff0ff,stroke:#0078d4,color:#003a6d;
+  classDef compute fill:#fff4ce,stroke:#8a6d3b,color:#5c4400;
+  classDef service fill:#e5f5e5,stroke:#2f855a,color:#22543d;
+
+  class ADLS_B storage;
+  class DB_S,DB_G compute;
+  class ADF,SYN,PBI service;
+```
+
 ## Components in this repo
 - `ADF/` – ADF pipelines, datasets, and linked services in JSON
 - `DataBricks/` – PySpark scripts for Silver and Gold layers
