@@ -1,12 +1,12 @@
 flowchart LR
-  GH[GitHub CSVs]
-  SQL[(SQL DB)]
-  ADF[Azure Data Factory<br/>Pipelines + Datasets]
-  ADLSB[ADLS Gen2<br/>Bronze (Raw)]
-  DBS[Azure Databricks<br/>Silver (Cleaned)]
-  DBG[Azure Databricks<br/>Gold (Aggregated)]
-  SYN[Azure Synapse<br/>(SQL/Serverless)]
-  PBI[Power BI / Dashboards]
+  GH["GitHub CSVs"]
+  SQL[("SQL DB")]
+  ADF["Azure Data Factory"]
+  ADLSB["ADLS Gen2 - Bronze"]
+  DBS["Databricks - Silver"]
+  DBG["Databricks - Gold"]
+  SYN["Synapse Analytics"]
+  PBI["Power BI Dashboards"]
 
   GH --> ADF
   SQL --> ADF
@@ -15,13 +15,5 @@ flowchart LR
   DBS --> DBG
   DBG --> SYN
   DBG --> PBI
-
-  classDef storage fill:#dff0ff,stroke:#0078d4,color:#003a6d;
-  classDef compute fill:#fff4ce,stroke:#8a6d3b,color:#5c4400;
-  classDef service fill:#e5f5e5,stroke:#2f855a,color:#22543d;
-
-  class ADLSB storage;
-  class DBS,DBG compute;
-  class ADF,SYN,PBI service;
 
 
